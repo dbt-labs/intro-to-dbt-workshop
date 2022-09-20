@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: stg_customer
+  - name: stg_customers
     description: staging layer for customers data
     columns:
       - name: customer_key
