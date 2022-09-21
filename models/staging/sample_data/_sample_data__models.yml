@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: stg_customers
+  - name: stg__customers
     description: staging layer for customers data
     columns:
       - name: customer_key
@@ -14,7 +14,7 @@ models:
       - name: address
         description: address of the customer
       - name: nation_key
-        description: foreign key to stg_nations
+        description: foreign key to stg__nations
       - name: phone_number
         description: phone number of the customer
       - name: account_balance
@@ -23,15 +23,15 @@ models:
         description: market segment of the customer
 
 
-  - name: stg_line_items
+  - name: stg__line_items
     description: staging layer for line items data
     columns:
       - name: order_key
-        description: foreign key to stg_orders
+        description: foreign key to stg__orders
       - name: part_key
-        description: foreign key to stg_part_suppliers
+        description: foreign key to stg__part_suppliers
       - name: supplier_key
-        description: foreign key to stg_suppliers
+        description: foreign key to stg__suppliers
       - name: line_number
         description: sequence of the order items within the order
       - name: quantity
@@ -58,7 +58,7 @@ models:
         description: method of shipping
   
 
-  - name: stg_nations
+  - name: stg__nations
     description: staging layer for nations data
     columns:
       - name: nation_key
@@ -69,10 +69,10 @@ models:
       - name: name
         description: nation name
       - name: region_key
-        description: foreign key to stg_regions
+        description: foreign key to stg__regions
         
  
-  - name: stg_order
+  - name: stg__order
     description: staging layer for orders data
     columns:
       - name: order_key
@@ -81,7 +81,7 @@ models:
           - unique
           - not_null
       - name: customer_key
-        description: foreign key to stg_customers
+        description: foreign key to stg__customers
       - name: status_code
         description: "{{ doc('status_code') }}"
       - name: total_price
@@ -100,7 +100,7 @@ models:
         description: numeric representation of the shipping priority, zero being the default
 
 
-  - name: stg_regions
+  - name: stg__regions
     columns:
       - name: region_key
         description: primary key of model
