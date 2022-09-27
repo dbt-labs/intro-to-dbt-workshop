@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: stg__customers
+  - name: stg_sample_data__customers
     description: staging layer for customers data
     columns:
       - name: customer_key
@@ -23,7 +23,7 @@ models:
         description: market segment of the customer
 
 
-  - name: stg__line_items
+  - name: stg_sample_data__line_items
     description: staging layer for line items data
     columns:
       - name: order_key
@@ -58,7 +58,7 @@ models:
         description: method of shipping
   
 
-  - name: stg__nations
+  - name: stg_sample_data__nations
     description: staging layer for nations data
     columns:
       - name: nation_key
@@ -72,7 +72,7 @@ models:
         description: foreign key to stg__regions
         
  
-  - name: stg__order
+  - name: stg_sample_data__orders
     description: staging layer for orders data
     columns:
       - name: order_key
@@ -100,7 +100,7 @@ models:
         description: numeric representation of the shipping priority, zero being the default
 
 
-  - name: stg__regions
+  - name: stg_sample_data__regions
     columns:
       - name: region_key
         description: primary key of model
