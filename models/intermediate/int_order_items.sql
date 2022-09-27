@@ -1,12 +1,12 @@
 with orders as (
     
-    select * from {{ ref('stg__orders') }}
+    select * from {{ ref('stg_sample_data__orders') }}
 
 ),
 
 line_item as (
 
-    select * from {{ ref('stg__line_items') }}
+    select * from {{ ref('stg_sample_data__line_items') }}
 
 )
 select 
