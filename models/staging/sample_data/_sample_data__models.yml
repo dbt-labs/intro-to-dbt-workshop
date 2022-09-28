@@ -60,7 +60,7 @@ models:
       - name: priority_code
         tests:
           - accepted_values:
-              values: ['1-URGENT','2-HIGH','3-MEDIUM','4-NOT SPECIFIED']
+              values: ['1-URGENT','2-HIGH','3-MEDIUM','4-NOT SPECIFIED', '5-LOW']
               severity: warn
       - name: clerk_name
       - name: ship_priority
