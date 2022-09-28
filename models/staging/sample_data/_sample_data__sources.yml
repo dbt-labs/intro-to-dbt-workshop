@@ -8,15 +8,13 @@ sources:
 
       - name: orders
         description: main order tracking table
-        
         columns:
           - name: o_orderkey
             description: Primary key of the Orders table
             tests: 
               # this applies the tests unique and not_null to the o_orderkey colum 
               - unique
-              - not_null
-                  
+              - not_null     
           - name: o_custkey
             description: Foreign Key to C_CUSTKEY
           - name: o_orderstatus
@@ -31,7 +29,10 @@ sources:
             description: id of the clerk
           - name: o_shippriority
             description: numeric representation of the shipping priority, zero being the default
-
+        loaded_at_field: "o_orderdate::timestamp"
+        freshness:
+          warn_after: {count: 12, period: hour}
+          error_after: {count: 24, period: hour} 
           
       - name: customer
         description: main customer table
