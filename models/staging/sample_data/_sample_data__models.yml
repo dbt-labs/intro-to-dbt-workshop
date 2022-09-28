@@ -18,7 +18,6 @@ models:
     columns:
       - name: order_key
         tests:
-          - unique
           - not_null
       - name: part_key
       - name: supplier_key
