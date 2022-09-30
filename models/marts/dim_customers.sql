@@ -20,7 +20,8 @@ final as (
         customers.customer_acct_balance,
         nations.nation_key as nation_key,
         regions.region_key as region_key
-
+        -- add nation name
+        -- and region name
         
     from
         customers

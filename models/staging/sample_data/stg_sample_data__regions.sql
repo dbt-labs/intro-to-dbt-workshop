@@ -10,7 +10,7 @@ transformed as (
 
   select 
     r_regionkey as region_key
-    
+    -- add region name here
 
 
   from source
