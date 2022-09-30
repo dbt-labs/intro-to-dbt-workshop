@@ -9,4 +9,5 @@ sources:
       - name: lineitem
       - name: nation
       - name: orders
+# add source freshness to the orders table here
       - name: region
