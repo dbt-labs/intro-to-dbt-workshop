@@ -22,12 +22,13 @@ models:
       - name: market_segment
         description: market segment of the customer
 
-
   - name: stg_sample_data__line_items
     description: staging layer for line items data
     columns:
       - name: order_key
         description: foreign key to stg__orders
+        tests:
+          - not_null
       - name: part_key
         description: foreign key to stg__part_suppliers
       - name: supplier_key
@@ -98,8 +99,6 @@ models:
         description: id of the clerk
       - name: ship_priority
         description: numeric representation of the shipping priority, zero being the default
-
-
   - name: stg_sample_data__regions
     columns:
       - name: region_key

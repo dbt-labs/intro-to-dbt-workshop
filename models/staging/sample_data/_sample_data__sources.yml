@@ -109,20 +109,5 @@ sources:
             description: Foreign Key to R_REGIONKEY
 
 
-      
-      
-      - name: region
-        description: region mapping
-        columns:
-          - name: r_regionkey
-            description: Primary Key of the Region table. 5 regions are populated
-            tests:
-              - unique:
-                  severity: warn
-              - not_null:
-                  severity: warn
-          - name: r_name
-            description: region name
-
 
       
