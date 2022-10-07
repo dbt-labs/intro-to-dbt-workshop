@@ -5,6 +5,7 @@ models:
     description: Customer dimensions table
     columns:
       - name: customer_key
+        description: Primary key on the customers table
         tests:
           - unique
           - not_null
@@ -26,10 +27,15 @@ models:
         description: account balance of the customer
       - name: market_segment
         description: market segment of the customer
+
+
+ 
  
   - name: fct_orders
+    description: orders fact table
     columns:
       - name: order_key
+        description: primary key of the model
         tests:
           - unique
           - not_null
@@ -60,12 +66,3 @@ models:
         description: item level tax total 
       - name: net_item_sales_amount
         description: the net total which factors in discount and tax  
-      - name: status_code
-      - name: priority_code
-      - name: clerk_name
-      - name: ship_priority  
-      - name: order_count   
-      - name: gross_item_sales_amount      
-      - name: item_discount_amount
-      - name: item_tax_amount
-      - name: net_item_sales_amount

@@ -4,9 +4,9 @@ One of the following values:
 
 | status         | definition                                       |
 |----------------|--------------------------------------------------|
-| O              | Ordered: Order placed, not yet shipped           |
-| P              | Order Pending: has been shipped                  |
-| F              | Order Finalized: order has been received         |
+| O              | Ordered                                          |
+| F              | Finalized (delivered)                            |
+| P              | Pending (out for shipping)                       |
 
 
 {% enddocs %}

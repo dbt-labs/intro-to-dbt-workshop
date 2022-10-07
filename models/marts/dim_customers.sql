@@ -21,7 +21,6 @@ final as (
         nations.nation_key as nation_key,
         regions.region_key as region_key,
         regions.region_name as region
-
     from
         customers
         inner join nations
