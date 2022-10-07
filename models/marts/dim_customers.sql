@@ -6,6 +6,7 @@ with customers as (
 nations as (
 
     select * from {{ ref('stg_sample_data__nations') }}
+    
 ),
 regions as (
 
