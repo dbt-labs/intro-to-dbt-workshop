@@ -4,6 +4,7 @@ source as (
 
   select * from {{ source('snowflake_sample_data', 'region') }}
 
+
 ),
 
 transformed as (
