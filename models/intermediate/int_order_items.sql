@@ -22,7 +22,7 @@ final as (
         orders.status_code as order_status_code,
         
         
-        line_items.return_flag,
+        
         
         line_items.line_number,
         line_items.status_code as order_item_status_code,
@@ -60,5 +60,5 @@ final as (
 
 )
 
-select * 
+select *
 from final
