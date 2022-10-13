@@ -1,12 +1,10 @@
 with customers as (
 
     select * from {{ ref('stg_sample_data__customers') }}
-
 ),
 nations as (
 
-    select * from {{ ref('stg_sample_data__nations') }}
-    
+    select * from {{ ref('stg_sample_data__nations') }}    
 ),
 regions as (
 
@@ -22,6 +20,9 @@ final as (
         nations.nation_key as nation_key,
         regions.region_key as region_key,
         regions.region_name as region
+        -- add nation name 
+        -- add region name 
+
     from
         customers
         inner join nations
