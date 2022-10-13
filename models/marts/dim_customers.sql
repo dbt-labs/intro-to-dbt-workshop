@@ -6,6 +6,7 @@ nations as (
 
     select * from {{ ref('stg_sample_data__nations') }}    
 ),
+
 regions as (
 
     select * from {{ ref('stg_sample_data__regions') }}
@@ -18,8 +19,7 @@ final as (
         customers.customer_phone,
         customers.customer_acct_balance,
         nations.nation_key as nation_key,
-        regions.region_key as region_key,
-        regions.region_name as region
+        regions.region_key as region_key
         -- add nation name 
         -- add region name 
 
