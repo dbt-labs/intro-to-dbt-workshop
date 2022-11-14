@@ -9,4 +9,8 @@ sources:
       - name: lineitem
       - name: nation
       - name: orders
+        loaded_at_field: "CAST(o_orderdate AS TIMESTAMP)"
+        freshness:
+          warn_after: {count: 1, period: day}
+          error_after: {count: 2, period: day}
       - name: region
