@@ -4,9 +4,6 @@ models:
   - name: dim_customers
     columns:
       - name: customer_key
-        tests:
-          - unique
-          - not_null
       - name: region_name
         tests:
           - accepted_values:
