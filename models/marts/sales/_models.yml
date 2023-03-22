@@ -9,11 +9,6 @@ models:
           - accepted_values:
               values: ['AFRICA','MIDDLE EAST','ASIA','AMERICA', 'EUROPE']
               severity: warn
-      - name: name
-      - name: address
-      - name: phone_number
-      - name: customer_account_balance
-      - name: market_segment
  
  
   - name: fct_orders
@@ -28,13 +23,3 @@ models:
               to: ref('dim_customers')
               field: customer_key
               severity: error
-      - name: order_date
-      - name: status_code
-      - name: priority_code
-      - name: clerk_name
-      - name: ship_priority  
-      - name: order_count   
-      - name: gross_item_sales_amount      
-      - name: item_discount_amount
-      - name: item_tax_amount
-      - name: net_item_sales_amount
